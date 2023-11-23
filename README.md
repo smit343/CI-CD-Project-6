@@ -136,6 +136,7 @@ Available routes:
 
 ## Diagram
 
+(https://github.com/smit343/CI-CD-Project-6/assets/60944678/ab718412-3ea4-4c37-9edd-d6327dcf7169)
 
 
 ## Authors
