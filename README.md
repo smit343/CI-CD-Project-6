@@ -61,7 +61,7 @@ Click the "Fork" button at the top-right corner of the repository page. This wil
 - In your terminal, clone the forked repository and navigate to the project 6 folder (replace the link below with the link to your repo):
 ```
 git clone https://github.com/smit343/CI-CD-Project-6.git
-cd WCD-DevOps/project_6
+
 ```
 
 - In your new GitHub repo, create secrets for your Dockerhub and AWS credentials by following the steps in the link below:
@@ -78,7 +78,7 @@ Make sure to name your secrets exactly as below, and fill them with the values o
 - Part 1: Deploy Jenkins Server with Terraform:
   Navigate to section_1 folder and execute the following Terraform commands:
 ```sh
-cd WCD-DevOps/project_6/section_1
+cd project_6/section_1
 terraform init
 terraform validate
 terraform plan
@@ -88,7 +88,7 @@ terraform apply -auto-approve
 - Part 2: Deploy the EKS Cluster with Terraform:
     Navigate to section_2 folder and execute the Terraform comands:
 ```sh
-cd WCD-DevOps/project_6/section_2
+cd project_6/section_2
 terraform init
 terraform validate
 terraform plan
@@ -102,7 +102,7 @@ aws eks update-kubeconfig --region <region> --name <EKS_cluster_name>
 - Part 3:
   Change to folder .github/workflows:
 ```sh
-cd WCD-DevOps/.github/workflows
+cd .github/workflows
 ```
   Open the cicd-pipeline.yaml file with a text editor and change the name of the docker images (lines 54 and 55) according to your Dockerhub username and desired image names. Moreover, you have to edit the docker image names in the YAML manifests located in the section_3 folder (app-deployment.yaml and mongo-deployment.yaml). Then, commit and push the changes on your GitHub repository, which will trigger the pipeline that will checkout the code, test, build the images, and deploy the application in your running EKS cluster.
 
